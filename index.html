@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TortoiseQuant: Systematic Research & Quantitative Analysis</title>
+    <meta name="description" content="Quantitative Analyst & Systematic Researcher - Transforming market complexity into mathematical frameworks for patient alpha generation.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tortoise-dark': '#0A0F1C',
+                        'tortoise-primary': '#0F172A',
+                        'tortoise-secondary': '#1E293B',
+                        'tortoise-accent': '#0D9488',
+                        'tortoise-light': '#F8FAFC',
+                        'tortoise-border': '#334155',
+                    },
+                    fontFamily: {
+                        'serif': ['Crimson Pro', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'display': ['Sora', 'Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1.5s ease-out',
+                        'slide-up': 'slideUp 1s ease-out',
+                        'draw-chart': 'drawChart 3s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(30px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        drawChart: {
+                            '0%': { 'stroke-dashoffset': '1000' },
+                            '100%': { 'stroke-dashoffset': '0' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans">
+
+    <!-- Navigation -->
+<nav class="fixed w-full z-50 py-4 gradient-bg border-b border-tortoise-border/50 backdrop-blur-lg">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center">
+            <!-- Logo with Brand Name Only -->
+            <div class="flex items-center space-x-3">
+                <div class="relative">
+                    <div class="w-10 h-10 bg-tortoise-accent rounded-full flex items-center justify-center">
+                        <!-- Brand Logo -->
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" opacity="0.2"/>
+                            <path d="M20 12c0-4.41-3.59-8-8-8S4 7.59 4 12c0 4.41 3.59 8 8 8s8-3.59 8-8z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="absolute -inset-1 bg-tortoise-accent/30 rounded-full blur-sm"></div>
+                </div>
+                <div>
+                    <span class="font-display text-lg md:text-xl font-bold text-white">TortoiseQuant</span>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu (Hidden on Mobile) -->
+<div class="hidden md:flex items-center space-x-8">
+    <a href="#home" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Home</a>
+    <a href="#framework" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Our Framework</a>
+    <a href="#portfolios" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300">Portfolios</a>
+    <a href="#contact" class="ml-4 px-6 py-2 bg-tortoise-accent text-white rounded-full font-medium hover:bg-teal-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Contact</a>
+</div>
+            
+            <!-- Empty div for layout balance on mobile -->
+            <div class="md:hidden w-10"></div>
+        </div>
+    </div>
+</nav>
+
+<!-- Bottom Navigation for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-tortoise-primary border-t border-tortoise-border py-3 px-4 z-50 shadow-2xl">
+    <div class="flex justify-around items-center">
+<a href="#home" class="flex flex-col items-center text-slate-300 hover:text-white transition-colors duration-300 group">
+    <div class="w-10 h-10 rounded-full bg-tortoise-primary flex items-center justify-center mb-1 group-hover:bg-tortoise-accent/10 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a2 2 0 002 2h10a2 2 0 002-2V10M9 21h6"/>
+        </svg>
+    </div>
+    <span class="text-xs font-medium">Home</span>
+</a>
+
+        
+        <a href="#framework" class="flex flex-col items-center text-slate-300 hover:text-white transition-colors duration-300 group">
+            <div class="w-10 h-10 rounded-full bg-tortoise-primary flex items-center justify-center mb-1 group-hover:bg-tortoise-accent/10 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+            </div>
+            <span class="text-xs font-medium">Framework</span>
+        </a>
+        
+        <a href="#portfolios" class="flex flex-col items-center text-slate-300 hover:text-white transition-colors duration-300 group">
+            <div class="w-10 h-10 rounded-full bg-tortoise-primary flex items-center justify-center mb-1 group-hover:bg-tortoise-accent/10 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                </svg>
+            </div>
+            <span class="text-xs font-medium">Portfolios</span>
+        </a>
+        
+        <a href="#contact" class="flex flex-col items-center text-slate-300 hover:text-white transition-colors duration-300 group">
+            <div class="w-10 h-10 rounded-full bg-tortoise-primary flex items-center justify-center mb-1 group-hover:bg-tortoise-accent/10 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+            </div>
+            <span class="text-xs font-medium">Contact</span>
+        </a>
+    </div>
+</div>
+
+       <!-- Hero Section with Curve Visualization -->
+    <section id="home" class="min-h-screen relative overflow-hidden pt-20 md:pt-32 pb-24 px-6 tortoise-shell">
+        <!-- Animated background elements -->
+        <div class="absolute top-20 left-10 w-72 h-72 bg-tortoise-accent/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-tortoise-primary/50 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="animate-fade-in">
+                    <!-- Powered by STEADY Framework -->
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-tortoise-accent/20 border border-tortoise-accent/30 text-tortoise-accent text-sm font-medium mb-8">
+                        <div class="w-2 h-2 bg-tortoise-accent rounded-full mr-2"></div>
+                        Powered by STEADY Framework™
+                    </div>
+                    
+                    <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+                        <span class="text-white">Systems Over</span>
+                        <span class="block number-gradient mt-2">Discretion</span>
+                    </h1>
+                    
+                    <p class="text-xl text-slate-300 mb-10 leading-relaxed max-w-xl font-serif">
+                        Designing disciplined, data-driven investment strategies to improve risk-adjusted returns through structure, diversification, and repeatable processes.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#portfolios" class="px-8 py-4 bg-tortoise-accent text-white font-semibold rounded-full hover:bg-teal-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl glow flex items-center justify-center">
+                            <span>Explore Systematic Portfolios</span>
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enhanced Curve and Ball Visualization with Heading -->
+                <div class="animate-fade-in" style="animation-delay: 300ms">
+                    <div class="curve-container shadow-2xl">
+                        <div class="curve-bg"></div>
+                        <div class="curve-overlay"></div>
+                        
+                        <!-- Heading on top of the curve -->
+                        <div class="curve-heading">
+                            We follow <span class="highlight">structure</span>, not  <span class="highlight">reactions</span>
+                        </div>
+                                                                                                
+                        <div class="curve-wrapper">
+                            <!-- The curve -->
+                            <svg class="w-full h-full" viewBox="0 0 500 300">
+                                <path id="curvePath" class="curve-line"
+                                    d="M10 250 C150 200, 300 120, 480 40"
+                                />
+                            </svg>
+                            
+                            <!-- Data points will be added dynamically -->
+                            <div id="dataPointsContainer"></div>
+                            
+                            <!-- The ball -->
+                            <div id="ball" class="ball"></div>
+                            
+                            <!-- Tortoise icon in corner -->
+                            <div class="absolute bottom-4 right-4 w-12 h-12 bg-tortoise-accent/30 rounded-full flex items-center justify-center border border-tortoise-accent/40 z-40">
+                                <svg class="w-6 h-6 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" opacity="0.2"/>
+                                    <path d="M20 12c0-4.41-3.59-8-8-8S4 7.59 4 12c0 4.41 3.59 8 8 8s8-3.59 8-8z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" fill="currentColor"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Replace your current About Me section with this: -->
+
+<!-- About Me Section -->
+    <!-- About Me Section -->
+    <section id="about" class="py-24 section-border hidden-section">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-1 rounded-full bg-tortoise-accent/10 text-tortoise-accent text-sm font-medium mb-6">
+                    My Background
+                </div>
+<h2 class="font-display text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+    <span class="text-tortoise-accent">Fund</span> <span class="text-tortoise-accent">Manager</span> <br>                     
+</h2>
+<h2 class="font-display text-2xl md:text-4xl font-bold mb-4 md:mb-6">
+    Quantitative Investment Strategies at Upstox
+</h2>
+<p class="text-sm md:text-xl text-slate-400 max-w-3xl mx-auto">
+    Ex CRISIL | Barclays | SBI | CLSA | Nirmal Bang | Edelweiss | AngelOne
+</p>
+</div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Image Side -->
+                <div class="animate-slide-up">
+                    <div class="relative">
+                        <div class="image-container rounded-3xl overflow-hidden border border-slate-800 bg-gradient-to-br from-slate-900 to-slate-950 shadow-2xl">
+                            <!-- Your Image -->
+                            <div class="relative h-[550px]">
+                                <img src="Images/Quant-profile.png" alt="Quantitative Analyst" 
+                                     class="w-full h-full object-cover object-center">
+                                
+                                <!-- Gradient overlay -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-transparent"></div>
+                            </div>
+                            
+<!-- Stats bar - Fixed for mobile side-by-side -->
+<div class="border-t border-slate-800 p-6 md:p-8">
+    <div class="flex justify-center items-center space-x-4 md:space-x-16">
+        <!-- Name -->
+        <div class="text-center">
+            <div class="flex items-center justify-center">
+                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-tortoise-accent/20 flex items-center justify-center mr-2 md:mr-3 flex-shrink-0">
+                    <svg class="w-4 h-4 md:w-5 md:h-5 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12c0 5.52 4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h-1v-2h4v2h-1v6z"/>
+                    </svg>
+                </div>
+                <div class="text-sm md:text-xl font-bold text-white whitespace-nowrap">Mohit Gupta</div>
+            </div>
+        </div>
+        
+        <!-- Location -->
+        <div class="text-center">
+            <div class="flex items-center justify-center">
+                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full bg-tortoise-accent/20 flex items-center justify-center mr-2 md:mr-3 flex-shrink-0">
+                    <svg class="w-4 h-4 md:w-5 md:h-5 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                </div>
+                <div class="text-sm md:text-xl font-bold text-white whitespace-nowrap">Mumbai</div>
+            </div>
+        </div>
+    </div>
+</div>
+                        </div>
+                    </div>
+                </div>
+                
+          <!-- Content Side -->
+<div class="animate-slide-up" style="animation-delay: 200ms">
+    <div class="space-y-8">
+        <!-- Professional Journey (NOW FIRST) -->
+        <div class="card-gradient rounded-2xl p-8">
+            <h4 class="text-white font-semibold mb-6">Professional Journey</h4>
+            <div class="space-y-4">
+                <div class="flex items-center">
+                    <div class="w-8 h-8 rounded-full bg-tortoise-accent/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <span class="text-sm font-bold text-tortoise-accent">1</span>
+                    </div>
+                    <div>
+                        <p class="text-white font-medium">CA, CFA (USA) & CS </p>
+                        <p class="text-sm text-slate-400">Strong foundation in finance and quantitative analysis</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 rounded-full bg-tortoise-accent/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <span class="text-sm font-bold text-tortoise-accent">2</span>
+                    </div>
+                    <div>
+                        <p class="text-white font-medium">Fundamental & Quantitative Research</p>
+                        <p class="text-sm text-slate-400">9+ years across top financial institutions</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-8 h-8 rounded-full bg-tortoise-accent/20 flex items-center justify-center mr-4 flex-shrink-0">
+                        <span class="text-sm font-bold text-tortoise-accent">3</span>
+                    </div>
+                    <div>
+                        <p class="text-white font-medium">Derivatives Trading</p>
+                        <p class="text-sm text-slate-400">Specialised in options structures, with deep expertise in calendar strategies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Key Skills (NOW SECOND with bullet points) -->
+        <div class="card-gradient rounded-2xl p-8">
+            <div class="flex items-start mb-4">
+                <div class="w-10 h-10 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mr-4">
+                    <svg class="w-5 h-5 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                    </svg>
+                </div>
+                <div class="flex-1">
+                    <h3 class="text-xl font-bold text-white mb-4">Key Skills</h3>
+                    
+                    <!-- Skills Grid with Points -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Column 1 -->
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 rounded-full bg-tortoise-accent mt-2 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-white font-medium">Quantitative Research</p>
+                                    <p class="text-sm text-slate-400">Statistical modeling & factor analysis</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 rounded-full bg-tortoise-accent mt-2 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-white font-medium">Portfolio Construction</p>
+                                    <p class="text-sm text-slate-400">Risk-aware, diversified strategies</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 rounded-full bg-tortoise-accent mt-2 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-white font-medium">Fundamental Research</p>
+                                    <p class="text-sm text-slate-400">Sector-agnostic, bottom-up company analysis </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 2 -->
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 rounded-full bg-tortoise-accent mt-2 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-white font-medium">Python </p>
+                                    <p class="text-sm text-slate-400">Quantitative libraries & backtesting</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 rounded-full bg-tortoise-accent mt-2 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-white font-medium">Risk Management</p>
+                                    <p class="text-sm text-slate-400">VaR, drawdown control, stress testing</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-2 h-2 rounded-full bg-tortoise-accent mt-2 mr-3 flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-white font-medium">Option Strategies</p>
+                                    <p class="text-sm text-slate-400">Systematic calendar spread strategies</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</div>
+    </div>
+</div>
+    </section>
+    
+      <!-- Philosophy Section -->
+    <section id="philosophy" class="py-24 section-border hidden-section">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-1 rounded-full bg-tortoise-accent/10 text-tortoise-accent text-sm font-medium mb-6">
+                    Our Philosophy
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                    The Mathematics of <span class="text-tortoise-accent">Systematic</span> Investing
+                </h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto font-serif italic">
+                    "We don't predict markets. We design disciplined frameworks that allow value to compound over time."
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-up">
+                    <div class="card-gradient rounded-3xl p-8 shadow-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-6">Our Approach</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-tortoise-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Objective Decisions</h4>
+                                    <p class="text-slate-400">Systems are designed to operate independently of sentiment, relying on predefined rules and objective signals rather than discretionary judgment.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-tortoise-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Compound Growth</h4>
+                                    <p class="text-slate-400">Returns are approached as a geometric process, where small, repeatable edges—applied consistently over time—drive long-term outcomes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mr-4">
+                                    <svg class="w-6 h-6 text-tortoise-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-white mb-2">Signal Extraction</h4>
+                                    <p class="text-slate-400">Markets contain a high degree of noise. The focus is on building robust filters that isolate persistent signals and reduce unnecessary variability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-slide-up" style="animation-delay: 200ms">
+                    <div class="space-y-8">
+                        <div class="quote-decoration pl-8">
+                            <blockquote class="text-2xl font-serif text-slate-300 mb-8 leading-relaxed">
+                                "Consistency of process matters more than precision of prediction."
+                            </blockquote>
+                        </div>
+                        
+                        <div class="quote-decoration pl-8">
+                            <blockquote class="text-2xl font-serif text-slate-300 leading-relaxed">
+                                "Markets reward patience when it is paired with structure and discipline."
+                            </blockquote>
+                        </div>
+                        
+                        <div class="pt-8 border-t border-slate-800 pl-8">
+                            <h4 class="text-white font-semibold mb-4">Quantitative Discipline</h4>
+                            <p class="text-slate-400 mb-6">
+                                Every decision is guided by our STEADY Framework™, ensuring consistency and minimizing behavioral bias across the investment process
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STEADY Framework Section -->
+    <section id="framework" class="py-24 section-border">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-1 rounded-full bg-tortoise-accent/10 text-tortoise-accent text-sm font-medium mb-6">
+                    Our Framework
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                    The <span class="text-tortoise-accent">STEADY</span> Framework™
+                </h2>
+                <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                    Our six-pillar approach to systematic investing
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Systematic -->
+                <div class="card-gradient rounded-2xl p-8 hover:transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mb-6">
+                        <span class="text-3xl font-bold text-tortoise-accent">S</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Systematic</h3>
+                    <p class="text-slate-400 mb-4">
+                        Every investment action follows predefined rules. No discretion, no deviation, no emotion.
+                    </p>
+                    <div class="pt-4 border-t border-slate-800">
+                        <p class="text-sm text-tortoise-accent">Rule-Based Execution</p>
+                    </div>
+                </div>
+                
+                <!-- Time-Tested -->
+                <div class="card-gradient rounded-2xl p-8 hover:transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mb-6">
+                        <span class="text-3xl font-bold text-tortoise-accent">T</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Time-Tested</h3>
+                    <p class="text-slate-400 mb-4">
+                        Our algorithms are designed to perform across market cycles, not just in specific conditions.
+                    </p>
+                    <div class="pt-4 border-t border-slate-800">
+                        <p class="text-sm text-tortoise-accent">Cycle-Agnostic Design</p>
+                    </div>
+                </div>
+                
+                <!-- Evidence-Led -->
+                <div class="card-gradient rounded-2xl p-8 hover:transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mb-6">
+                        <span class="text-3xl font-bold text-tortoise-accent">E</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Evidence-Led</h3>
+                    <p class="text-slate-400 mb-4">
+                        Every hypothesis is tested against historical data before implementation.
+                    </p>
+                    <div class="pt-4 border-t border-slate-800">
+                        <p class="text-sm text-tortoise-accent">Data-Backed Hypotheses</p>
+                    </div>
+                </div>
+                
+                <!-- Adaptive -->
+                <div class="card-gradient rounded-2xl p-8 hover:transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mb-6">
+                        <span class="text-3xl font-bold text-tortoise-accent">A</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Adaptive</h3>
+                    <p class="text-slate-400 mb-4">
+                        Our systems evolve with market regimes while maintaining core principles.
+                    </p>
+                    <div class="pt-4 border-t border-slate-800">
+                        <p class="text-sm text-tortoise-accent">Regime-Aware Adjustments</p>
+                    </div>
+                </div>
+                
+                <!-- Data-Driven -->
+                <div class="card-gradient rounded-2xl p-8 hover:transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mb-6">
+                        <span class="text-3xl font-bold text-tortoise-accent">D</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Data-Driven</h3>
+                    <p class="text-slate-400 mb-4">
+                        Quantitative rigor in every aspect, from signal generation to risk management.
+                    </p>
+                    <div class="pt-4 border-t border-slate-800">
+                        <p class="text-sm text-tortoise-accent">Quantitative Precision</p>
+                    </div>
+                </div>
+                
+                <!-- Your Capital, My Discipline -->
+                <div class="card-gradient rounded-2xl p-8 hover:transform hover:-translate-y-2 transition-all duration-500">
+                    <div class="w-14 h-14 rounded-xl bg-tortoise-accent/20 flex items-center justify-center mb-6">
+                        <span class="text-3xl font-bold text-tortoise-accent">Y</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Your Capital, Our Discipline</h3>
+                    <p class="text-slate-400 mb-4">
+                        We apply the same discipline to managing capital as we do to my mathematical models.
+                    </p>
+                    <div class="pt-4 border-t border-slate-800">
+                        <p class="text-sm text-tortoise-accent">Aligned Stewardship</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolios Section -->
+ <!-- My Work Section -->
+<section id="portfolios" class="py-24 section-border">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <div class="inline-block px-4 py-1 rounded-full bg-tortoise-accent/10 text-tortoise-accent text-sm font-medium mb-6">
+                Systematic Portfolios
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                <span class="text-tortoise-accent">Quantitative</span> Strategies </h2>
+            <p class="text-xl text-slate-400 max-w-3xl mx-auto">
+                Rule-based portfolios with transparent performance tracking
+            </p>
+        </div>
+    
+</div>
+        <!-- Portfolio Cards Container (Will be populated by JavaScript) -->
+        <div id="portfolio-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <!-- Cards will be generated here -->
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center">
+            <button id="load-more" class="px-8 py-3 border border-slate-700 text-white font-semibold rounded-full hover:bg-white/5 transition-all duration-300">
+                Load More Strategies
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Performance Modal (Will be populated by JavaScript) -->
+<div id="performanceModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <!-- Background overlay -->
+        <div class="fixed inset-0 bg-black/70 transition-opacity" aria-hidden="true"></div>
+        
+        <!-- Modal content -->
+        <div class="inline-block align-bottom card-gradient rounded-3xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full">
+            <div class="px-8 py-6 border-b border-slate-800">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold text-white" id="modalStrategyName">Strategy Performance</h3>
+                    <button id="closeModal" class="text-slate-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="px-8 py-6">
+                <!-- Year Tabs (Will be generated) -->
+                <div id="yearTabs" class="flex space-x-2 mb-8">
+                    <!-- Tabs will be generated here -->
+                </div>
+                <!-- Add this right after the year tabs section in the modal (around line 365-375) -->
+<div id="yearTabsContainer" class="mb-8">
+    <div id="yearTabs" class="flex space-x-2 mb-2">
+        <!-- Tabs will be generated here -->
+    </div>
+    
+    <!-- Cumulative Performance Display -->
+    <div id="cumulativeDisplay" class="mt-2 p-4 bg-gradient-to-r from-tortoise-secondary/30 to-tortoise-primary/30 rounded-xl border border-tortoise-border/50">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-tortoise-accent mr-3"></div>
+                <div>
+                    <p class="text-slate-400 text-sm">Cumulative YTD for <span id="currentYearLabel" class="text-white font-medium">CY25</span></p>
+                    <p id="cumulativeInfo" class="text-xs text-slate-500">Strategy vs Benchmark performance for the year</p>
+                </div>
+            </div>
+            <div class="text-right">
+                <p id="cumulativeStrategy" class="text-white font-bold text-lg">+8.2%</p>
+                <p id="cumulativeBenchmark" class="text-slate-400 text-sm">Benchmark: <span class="text-slate-300">+8.3%</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+                
+               <!-- Performance Table - Mobile Optimized -->
+<div class="overflow-x-auto">
+    <table class="w-full text-xs sm:text-sm">
+        <thead>
+            <tr class="border-b border-slate-800">
+                <th class="text-left py-3 px-2 sm:px-4 text-slate-400 font-medium">Month</th>
+                <th class="text-center py-3 px-1 sm:px-4 text-slate-400 font-medium">Return</th>
+                <th class="text-center py-3 px-1 sm:px-4 text-slate-400 font-medium">Holdings</th>         
+            </tr>
+        </thead>
+        <tbody id="performanceTable">
+            <!-- Data will be populated by JavaScript -->
+        </tbody>
+     </table>    
+</div>
+            </div> <!-- Closes: <div class="px-8 py-6"> -->
+        </div> <!-- Closes: <div class="inline-block align-bottom ..."> -->
+    </div> <!-- Closes: <div class="flex items-center justify-center ..."> -->
+</div> <!-- Closes: <div id="performanceModal"> -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <div class="inline-block px-4 py-1 rounded-full bg-tortoise-accent/10 text-tortoise-accent text-sm font-medium mb-6">
+                    Contact
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                    Let's <span class="text-tortoise-accent">Connect</span>
+                </h2>
+
+                       
+            <div class="card-gradient rounded-3xl p-8 max-w-2xl mx-auto">
+                <div class="text-center mb-10">
+                    <div class="w-20 h-20 rounded-full bg-tortoise-accent/20 flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                        </svg>
+                    </div>
+                    <p class="text-slate-400">Open to discussions around quantitative research, systematic frameworks, and portfolio designs.</p>
+                </div>
+                
+<div class="space-y-8">
+    <div class="flex flex-col items-center sm:hidden">
+        <!-- Mobile Layout - Side by side -->
+        <div class="flex justify-center items-center space-x-6 w-full">
+            <!-- Email -->
+            <a href="mailto:info@tortoisequant.com" class="flex flex-col items-center text-slate-300 hover:text-white transition-colors group">
+                <div class="w-10 h-10 rounded-xl bg-tortoise-accent/10 flex items-center justify-center mb-2 group-hover:bg-tortoise-accent/20 transition-colors">
+                    <svg class="w-5 h-5 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                    </svg>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm font-medium">Email</p>                    
+                </div>
+            </a>
+            
+            <!-- LinkedIn -->
+            <a href="https://in.linkedin.com/in/mohit-gupta-139992127" target="_blank" class="flex flex-col items-center text-slate-300 hover:text-white transition-colors group">
+                <div class="w-10 h-10 rounded-xl bg-tortoise-accent/10 flex items-center justify-center mb-2 group-hover:bg-tortoise-accent/20 transition-colors">
+                    <svg class="w-5 h-5 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm font-medium">LinkedIn</p>                    
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Desktop Layout (hidden on mobile) - Keep your original desktop layout -->
+    <div class="hidden sm:flex sm:items-center sm:justify-center sm:gap-16">
+        <!-- Email - Desktop Side-by-side -->
+        <a href="mailto:info@tortoisequant.com" class="flex items-center text-slate-300 hover:text-white transition-colors group">
+            <div class="w-12 h-12 rounded-xl bg-tortoise-accent/10 flex items-center justify-center mr-4 group-hover:bg-tortoise-accent/20 transition-colors">
+                <svg class="w-6 h-6 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                </svg>
+            </div>
+            <div class="text-left">
+                <p class="font-medium">Email</p>
+                <p class="text-sm text-slate-400 group-hover:text-slate-300">info@tortoisequant.com</p>
+            </div>
+        </a>
+        
+        <!-- LinkedIn - Desktop Side-by-side -->
+        <a href="https://in.linkedin.com/in/mohit-gupta-139992127" target="_blank" class="flex items-center text-slate-300 hover:text-white transition-colors group">
+            <div class="w-12 h-12 rounded-xl bg-tortoise-accent/10 flex items-center justify-center mr-4 group-hover:bg-tortoise-accent/20 transition-colors">
+                <svg class="w-6 h-6 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+            </div>
+            <div class="text-left">
+                <p class="font-medium">LinkedIn</p>
+                <p class="text-sm text-slate-400 group-hover:text-slate-300">TortoiseQuant</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-tortoise-dark border-t border-tortoise-border pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-tortoise-accent rounded-full flex items-center justify-center">
+                            <!-- Brand Logo -->
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" opacity="0.2"/>
+                                <path d="M20 12c0-4.41-3.59-8-8-8S4 7.59 4 12c0 4.41 3.59 8 8 8s8-3.59 8-8z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="font-display text-xl font-bold text-white">TortoiseQuant</span>
+                            <p class="text-xs text-slate-500 -mt-1">Systematic Alpha</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-500 max-w-md">
+                    Designing disciplined, data-driven investment strategies to improve risk-adjusted returns through structure, diversification, and repeatable processes.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Contact</h4>
+                    <p class="text-slate-500 mb-2">info@tortoisequant.com</p>
+                    <p class="text-slate-500">Mumbai, India</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-6">Navigation</h4>
+<ul class="space-y-3">
+    <li><a href="#home" class="text-slate-500 hover:text-white transition-colors">Home</a></li>
+    <li><a href="#framework" class="text-slate-500 hover:text-white transition-colors">Our Framework</a></li>
+    <li><a href="#portfolios" class="text-slate-500 hover:text-white transition-colors">Portfolios</a></li>
+</ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-tortoise-border pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-slate-600 mb-4 md:mb-0">
+                        &copy; 2025 TortoiseQuant. All rights reserved.
+                    </p>
+                    <p class="text-xs text-slate-600">
+                        Built slowly. Built systematically. Built with patience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Disclaimer Modal -->
+<div id="disclaimerModal" class="fixed inset-0 z-[100] hidden overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <!-- Background overlay -->
+        <div class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
+        
+        <!-- Modal content -->
+        <div class="inline-block align-bottom bg-tortoise-primary rounded-3xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full border border-tortoise-border">
+            <!-- Header with TortoiseQuant Logo -->
+            <div class="px-8 py-6 bg-gradient-to-r from-tortoise-primary to-tortoise-secondary">
+                <div class="flex items-center">
+                    <!-- TortoiseQuant Logo -->
+                    <div class="w-10 h-10 bg-tortoise-accent rounded-full flex items-center justify-center mr-4">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17 13H13V17H11V13H7V11H11V7H13V11H17V13Z" opacity="0.2"/>
+                            <path d="M20 12c0-4.41-3.59-8-8-8S4 7.59 4 12c0 4.41 3.59 8 8 8s8-3.59 8-8z" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="font-display text-xl font-bold text-white">TortoiseQuant</span>
+                        <p class="text-xs text-slate-400 -mt-1">Systematic Alpha</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="px-8 py-6 bg-tortoise-primary">
+                <div class="space-y-6">
+                    <p class="text-slate-300 leading-relaxed text-center">
+                        <span class="font-medium text-white">TortoiseQuant</span> is an independent platform created for 
+                        <span class="font-medium text-tortoise-accent"> educational and informational purposes</span>
+                    </p>
+                    
+                    <div class="bg-tortoise-secondary/50 rounded-xl p-5 border border-slate-700">
+                        <h4 class="text-white font-semibold mb-4 flex items-center">
+                            <svg class="w-4 h-4 mr-2 text-tortoise-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L1 21h22L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/>
+                            </svg>
+                            Important Disclosures
+                        </h4>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li class="flex items-start">
+                                <span class="text-tortoise-accent mr-2 mt-1">•</span>
+                                <span>Markets involve risk, and <span class="text-white">past performance does not guarantee future results</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-tortoise-accent mr-2 mt-1">•</span>
+                                <span>Any portfolios, backtests, or strategies shown are <span class="text-white">illustrative and educational, not investment recommendations</span>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-tortoise-accent mr-2 mt-1">•</span>
+                                <span>TortoiseQuant is <span class="text-white">not registered with SEBI</span> as a Research Analyst or Investment Advisor.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-tortoise-accent mr-2 mt-1">•</span>
+                                <span>No <span class="text-white">fee-based services, paid recommendations, or monetary transactions</span> are offered on this platform.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-tortoise-accent mr-2 mt-1">•</span>
+                                <span>All views and opinions expressed are <span class="text-white">strictly personal</span> and do not represent the views of any employer, organization, or affiliated entity.</span>
+                            </li>
+                        </ul>
+                    </div>
+                                                    
+            <!-- Footer -->
+            <div class="px-8 py-6 bg-tortoise-primary border-t border-tortoise-border">
+                <button id="acceptDisclaimer" 
+                        class="w-full px-6 py-3 bg-tortoise-accent text-white font-semibold rounded-lg hover:bg-teal-700 transition-colors flex items-center justify-center">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    I Understand & Agree to Continue
+                </button>
+                <p class="text-xs text-slate-500 text-center mt-4">
+                    By continuing, you acknowledge and agree to these disclosures.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- JavaScript -->
+    <script src="portfolio-engine.js"></script>
+    <script src="script.js"></script> 
+</body>
+</html>

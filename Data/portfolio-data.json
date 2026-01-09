@@ -1,0 +1,437 @@
+{
+  "strategies": [
+    {
+      "id": "Core Growth Alpha",
+      "name": "Core Growth Alpha",
+      "category": "Growth & Quality",
+      "color": "emerald",
+      "benchmark_name": "NIFTY 200", 
+      "description": "Balanced growth approach across market capitalization spectrum from Nifty 200",
+      "holdings_file": "113_Core_Growth_Jan_26.xlsx",
+      "performance": {
+        "2026": {
+          "ytd": "Ongoing",
+          "benchmark_ytd": "Ongoing",
+          "months": [
+            {"month": "Jan 26", "return": "Ongoing", "benchmark": "Ongoing", "holdings_excel": "downloads/CoreGrowth/113_Core_Growth_Jan_26.xlsx"}         
+          ]
+        },
+        "2025": {
+          "ytd": "+4.7%",
+          "benchmark_ytd": "+7.96%",
+          "months": [
+            {"month": "Jan 25", "return": "-12.3%", "benchmark": "+8.2%", "holdings_excel": "downloads/CoreGrowth/101_Core_Growth_Jan_25.xlsx"},
+            {"month": "Feb 25", "return": "-7.9%", "benchmark": "+7.1%", "holdings_excel": "downloads/CoreGrowth/102_Core_Growth_Feb_25.xlsx"},
+            {"month": "Mar 25", "return": "+12.4%", "benchmark": "+10.4%", "holdings_excel": "downloads/CoreGrowth/103_Core_Growth_Mar_25.xlsx"},
+            {"month": "Apr 25", "return": "+2.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/104_Core_Growth_Apr_25.xlsx"},
+            {"month": "May 25", "return": "+4.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/105_Core_Growth_May_25.xlsx"},
+            {"month": "Jun 25", "return": "+6.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/106_Core_Growth_Jun_25.xlsx"},
+            {"month": "Jul 25", "return": "-0.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/107_Core_Growth_Jul_25.xlsx"},
+            {"month": "Aug 25", "return": "-0.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/108_Core_Growth_Aug_25.xlsx"},
+            {"month": "Sep 25", "return": "-1.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/109_Core_Growth_Sep_25.xlsx"},
+            {"month": "Oct 25", "return": "+2.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/110_Core_Growth_Oct_25.xlsx"},
+            {"month": "Nov 25", "return": "+2.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/111_Core_Growth_Nov_25.xlsx"},
+            {"month": "Dec 25", "return": "-1.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/CoreGrowth/112_Core_Growth_Dec_25.xlsx"}         
+          ]
+        },
+        "2024": {
+          "ytd": "+68.1%",
+          "benchmark_ytd": "+13.4%",
+          "months": [
+           {"month": "Jan 24", "return": "+7.7%", "benchmark": "+7.7%", "holdings_excel": "downloads/CoreGrowth/90_Core_Growth_Jan_24.xlsx"},
+            {"month": "Feb 24", "return": "-2.8%", "benchmark": "-2.8%", "holdings_excel": "downloads/CoreGrowth/91_Core_Growth_Feb_24.xlsx"},
+            {"month": "Mar 24", "return": "-2.0%", "benchmark": "-2.0%", "holdings_excel": "downloads/CoreGrowth/92_Core_Growth_Mar_24.xlsx"},
+            {"month": "Apr 24", "return": "+12.4%", "benchmark": "+12.4%", "holdings_excel": "downloads/CoreGrowth/93_Core_Growth_Apr_24.xlsx"},
+            {"month": "May 24", "return": "+15.0%", "benchmark": "+15%", "holdings_excel": "downloads/CoreGrowth/94_Core_Growth_May_24.xlsx"},
+            {"month": "Jun 24", "return": "+20.0%", "benchmark": "+20%", "holdings_excel": "downloads/CoreGrowth/95_Core_Growth_Jun_24.xlsx"},
+            {"month": "Jul 24", "return": "+15.1%", "benchmark": "+15.1%", "holdings_excel": "downloads/CoreGrowth/95_Core_Growth_Jul_24.xlsx"},
+            {"month": "Aug 24", "return": "-8.0%", "benchmark": "-8.0%", "holdings_excel": "downloads/CoreGrowth/96_Core_Growth_Aug_24.xlsx"},
+            {"month": "Sep 24", "return": "+5.3%", "benchmark": "+5.3%", "holdings_excel": "downloads/CoreGrowth/97_Core_Growth_Sep_24.xlsx"},
+            {"month": "Oct 24", "return": "-6.7%", "benchmark": "-6.7%", "holdings_excel": "downloads/CoreGrowth/98_Core_Growth_Oct_24.xlsx"},
+            {"month": "Nov 24", "return": "-2.2%", "benchmark": "-2.2%", "holdings_excel": "downloads/CoreGrowth/99_Core_Growth_Nov_24.xlsx"},
+            {"month": "Dec 24", "return": "+3.9%", "benchmark": "+3.9%", "holdings_excel": "downloads/CoreGrowth/100_Core_Growth_Dec_24.xlsx"}
+          ]
+        },
+        "2023": {
+          "ytd": "+76.9%",
+          "benchmark_ytd": "+22.9%",
+          "months": [
+            {"month": "Jan 23", "return": "-6.3%", "benchmark": "-6.3%", "holdings_excel": "downloads/CoreGrowth/79_Core_Growth_Jan_23.xlsx"},
+            {"month": "Feb 23", "return": "-9.3%", "benchmark": "-9.3%", "holdings_excel": "downloads/CoreGrowth/80_Core_Growth_Feb_23.xlsx"},
+            {"month": "Mar 23", "return": "-0.8%", "benchmark": "-0.8%", "holdings_excel": "downloads/CoreGrowth/81_Core_Growth_Mar_23.xlsx"},
+            {"month": "Apr 23", "return": "+7.9%", "benchmark": "+7.9%", "holdings_excel": "downloads/CoreGrowth/81_Core_Growth_Apr_23.xlsx"},
+            {"month": "May 23", "return": "+7.3%", "benchmark": "+7.3%", "holdings_excel": "downloads/CoreGrowth/82_Core_Growth_May_23.xlsx"},
+            {"month": "Jun 23", "return": "+17.0%", "benchmark": "+17%", "holdings_excel": "downloads/CoreGrowth/83_Core_Growth_Jun_23.xlsx"},
+            {"month": "Jul 23", "return": "+20.8%", "benchmark": "+20%", "holdings_excel": "downloads/CoreGrowth/84_Core_Growth_Jul_23.xlsx"},
+            {"month": "Aug 23", "return": "+2.6%", "benchmark": "+2.6%", "holdings_excel": "downloads/CoreGrowth/85_Core_Growth_Aug_23.xlsx"},
+            {"month": "Sep 23", "return": "+10.2%", "benchmark": "+10.2%", "holdings_excel": "downloads/CoreGrowth/86_Core_Growth_Sep_23.xlsx"},
+            {"month": "Oct 23", "return": "-5.7%", "benchmark": "-5.7%", "holdings_excel": "downloads/CoreGrowth/87_Core_Growth_Oct_23.xlsx"},
+            {"month": "Nov 23", "return": "+9.8%", "benchmark": "+9.8%", "holdings_excel": "downloads/CoreGrowth/88_Core_Growth_Nov_23.xlsx"},
+            {"month": "Dec 23", "return": "+9.6%", "benchmark": "+9.6%", "holdings_excel": "downloads/CoreGrowth/89_Core_Growth_Dec_23.xlsx"}
+          ]
+        }       
+        
+      }
+    },
+    {
+      "id": "momentum",
+      "name": "Momentum Engine",
+      "category": "Trend Following",
+      "color": "emerald",
+      "benchmark_name": "NIFTY 500",
+      "description": "Systematically captures price momentum with volatility filters from Nifty500",
+      "holdings_file": "117_Momentum_Engine_Jan_26.xlsx",
+      "performance":  {
+        "2026": {
+          "ytd": "Ongoing",
+          "benchmark_ytd": "Ongoing",
+          "months": [
+            {"month": "Jan 26", "return": "Ongoing", "benchmark": "Ongoing", "holdings_excel": "downloads/MomentumEngine/117_Momentum_Engine_Jan_26.xlsx"}         
+          ]
+        },
+        "2025": {
+          "ytd": "-5.2%",
+          "benchmark_ytd": "+6.2%",
+          "months": [
+            {"month": "Jan 25", "return": "-17.3%", "benchmark": "+8.2%", "holdings_excel": "downloads/MomentumEngine/106_Momentum_Engine_Jan_25.xlsx"},
+            {"month": "Feb 25", "return": "-14.0%", "benchmark": "+7.1%", "holdings_excel": "downloads/MomentumEngine/107_Momentum_Engine_Feb_25.xlsx"},
+            {"month": "Mar 25", "return": "+15.7%", "benchmark": "+10.4%", "holdings_excel": "downloads/MomentumEngine/108_Momentum_Engine_Mar_25.xlsx"},
+            {"month": "Apr 25", "return": "+0.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/109_Momentum_Engine_Apr_25.xlsx"},
+            {"month": "May 25", "return": "+8.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/110_Momentum_Engine_May_25.xlsx"},
+            {"month": "Jun 25", "return": "+6.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/111_Momentum_Engine_Jun_25.xlsx"},
+            {"month": "Jul 25", "return": "-0.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/112_Momentum_Engine_Jul_25.xlsx"},
+            {"month": "Aug 25", "return": "-2.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/112_Momentum_Engine_Aug_25.xlsx"},
+            {"month": "Sep 25", "return": "-3.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/113_Momentum_Engine_Sep_25.xlsx"},
+            {"month": "Oct 25", "return": "+2.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/114_Momentum_Engine_Oct_25.xlsx"},
+            {"month": "Nov 25", "return": "+0.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/115_Momentum_Engine_Nov_25.xlsx"},
+            {"month": "Dec 25", "return": "+2.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/116_Momentum_Engine_Dec_25.xlsx"}            
+          ]
+        },
+        "2024": {
+          "ytd": "+59.6%",
+          "benchmark_ytd": "+14.9%",
+          "months": [
+           {"month": "Jan 24", "return": "+11.9%", "benchmark": "+8.2%", "holdings_excel": "downloads/MomentumEngine/94_Momentum_Engine_Jan_24.xlsx"},
+            {"month": "Feb 24", "return": "+1.4%", "benchmark": "+7.1%", "holdings_excel": "downloads/MomentumEngine/95_Momentum_Engine_Feb_24.xlsx"},
+            {"month": "Mar 24", "return": "-3.3%", "benchmark": "+10.4%", "holdings_excel": "downloads/MomentumEngine/96_Momentum_Engine_Mar_24.xlsx"},
+            {"month": "Apr 24", "return": "+15.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/97_Momentum_Engine_Apr_24.xlsx"},
+            {"month": "May 24", "return": "+2.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/98_Momentum_Engine_May_24.xlsx"},
+            {"month": "Jun 24", "return": "+9.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/99_Momentum_Engine_Jun_24.xlsx"},
+            {"month": "Jul 24", "return": "+7.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/100_Momentum_Engine_Jul_24.xlsx"},
+            {"month": "Aug 24", "return": "-0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/101_Momentum_Engine_Aug_24.xlsx"},
+            {"month": "Sep 24", "return": "-0.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/102_Momentum_Engine_Sep_24.xlsx"},
+            {"month": "Oct 24", "return": "-0.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/103_Momentum_Engine_Oct_24.xlsx"},
+            {"month": "Nov 24", "return": "+1.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/104_Momentum_Engine_Nov_24.xlsx"},
+            {"month": "Dec 24", "return": "+5.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/105_Momentum_Engine_Dec_24.xlsx"}
+          ]
+        },
+        "2023": {
+          "ytd": "+100.4%",
+          "benchmark_ytd": "+25.1%",
+          "months": [
+            {"month": "Jan 23", "return": "-4.9%", "benchmark": "+8.2%", "holdings_excel": "downloads/MomentumEngine/82_Momentum_Engine_Jan_23.xlsx"},
+            {"month": "Feb 23", "return": "-7.7%", "benchmark": "+7.1%", "holdings_excel": "downloads/MomentumEngine/83_Momentum_Engine_Feb_23.xlsx"},
+            {"month": "Mar 23", "return": "+5.4%", "benchmark": "+10.4%", "holdings_excel": "downloads/MomentumEngine/84_Momentum_Engine_Mar_23.xlsx"},
+            {"month": "Apr 23", "return": "+9.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/85_Momentum_Engine_Apr_23.xlsx"},
+            {"month": "May 23", "return": "+7.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/86_Momentum_Engine_May_23.xlsx"},
+            {"month": "Jun 23", "return": "+9.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/87_Momentum_Engine_Jun_23.xlsx"},
+            {"month": "Jul 23", "return": "+15.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/88_Momentum_Engine_Jul_23.xlsx"},
+            {"month": "Aug 23", "return": "+14.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/89_Momentum_Engine_Aug_23.xlsx"},
+            {"month": "Sep 23", "return": "+4.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/90_Momentum_Engine_Sep_23.xlsx"},
+            {"month": "Oct 23", "return": "-0.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/91_Momentum_Engine_Oct_23.xlsx"},
+            {"month": "Nov 23", "return": "+15.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/92_Momentum_Engine_Nov_23.xlsx"},
+            {"month": "Dec 23", "return": "+4.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/MomentumEngine/93_Momentum_Engine_Dec_23.xlsx"}
+          ]
+        }
+      }
+    },
+    {
+      "id": "Diversified",
+      "name": "Diversified Market Plus",
+      "category": "Broad Market Index Plus",
+      "color": "emerald",
+      "benchmark_name": "NIFTY 500",
+      "description": "Highly diversified strategy seeking to maximize information ratio vs Nifty 500",
+      "holdings_file": "119_Diversified_Market_Plus_Jan_26.xlsx",
+      "performance": {
+        "2026": {
+          "ytd": "Ongoing",
+          "benchmark_ytd": "Ongoing",
+          "months": [
+            {"month": "Jan 26", "return": "Ongoing", "benchmark": "+8.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/119_Diversified_Market_Plus_Jan_26.xlsx"}         
+          ]
+        },
+        "2025": {
+          "ytd": "+6.1%",
+          "benchmark_ytd": "+6.2%",
+          "months": [
+            {"month": "Jan 25", "return": "-6.9%", "benchmark": "+8.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/107_Diversified_Market_Plus_Jan_25.xlsx"},
+            {"month": "Feb 25", "return": "-9.9%", "benchmark": "+7.1%", "holdings_excel": "downloads/DiversifiedMarketPlus/108_Diversified_Market_Plus_Feb_25.xlsx"},
+            {"month": "Mar 25", "return": "+8.3%", "benchmark": "+10.4%", "holdings_excel": "downloads/DiversifiedMarketPlus/109_Diversified_Market_Plus_Mar_25.xlsx"},
+            {"month": "Apr 25", "return": "+3.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/110_Diversified_Market_Plus_Apr_25.xlsx"},
+            {"month": "May 25", "return": "+5.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/111_Diversified_Market_Plus_May_25.xlsx"},
+            {"month": "Jun 25", "return": "+4.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/112_Diversified_Market_Plus_Jun_25.xlsx"},
+            {"month": "Jul 25", "return": "-3.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/113_Diversified_Market_Plus_Jul_25.xlsx"},
+            {"month": "Aug 25", "return": "-1.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/114_Diversified_Market_Plus_Aug_25.xlsx"},
+            {"month": "Sep 25", "return": "+1.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/115_Diversified_Market_Plus_Sep_25.xlsx"},
+            {"month": "Oct 25", "return": "+3.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/116_Diversified_Market_Plus_Oct_25.xlsx"},
+            {"month": "Nov 25", "return": "+2.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/117_Diversified_Market_Plus_Nov_25.xlsx"},
+            {"month": "Dec 25", "return": "+0.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/118_Diversified_Market_Plus_Dec_25.xlsx"}
+          ]
+        },
+        "2024": {
+          "ytd": "+42.0%",
+          "benchmark_ytd": "+14.9%",
+          "months": [
+           {"month": "Jan 24", "return": "+8.5%", "benchmark": "+8.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/95_Diversified_Market_Plus_Jan_24.xlsx"},
+            {"month": "Feb 24", "return": "+1.3%", "benchmark": "+7.1%", "holdings_excel": "downloads/DiversifiedMarketPlus/96_Diversified_Market_Plus_Feb_24.xlsx"},
+            {"month": "Mar 24", "return": "+2.4%", "benchmark": "+10.4%", "holdings_excel": "downloads/DiversifiedMarketPlus/97_Diversified_Market_Plus_Mar_24.xlsx"},
+            {"month": "Apr 24", "return": "+7.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/98_Diversified_Market_Plus_Apr_24.xlsx"},
+            {"month": "May 24", "return": "+5.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/99_Diversified_Market_Plus_May_24.xlsx"},
+            {"month": "Jun 24", "return": "+8.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/100_Diversified_Market_Plus_Jun_24.xlsx"},
+            {"month": "Jul 24", "return": "+8.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/101_Diversified_Market_Plus_Jul_24.xlsx"},
+            {"month": "Aug 24", "return": "-0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/102_Diversified_Market_Plus_Aug_24.xlsx"},
+            {"month": "Sep 24", "return": "+0.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/103_Diversified_Market_Plus_Sep_24.xlsx"},
+            {"month": "Oct 24", "return": "-7.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/104_Diversified_Market_Plus_Oct_24.xlsx"},
+            {"month": "Nov 24", "return": "+0.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/105_Diversified_Market_Plus_Nov_24.xlsx"},
+            {"month": "Dec 24", "return": "+0.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/106_Diversified_Market_Plus_Dec_24.xlsx"}
+          ]
+        },
+        "2023": {
+          "ytd": "+41.9%",
+          "benchmark_ytd": "+25.1%",
+          "months": [
+            {"month": "Jan 23", "return": "-6.2%", "benchmark": "+8.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/83_Diversified_Market_Plus_Jan_23.xlsx"},
+            {"month": "Feb 23", "return": "-7.0%", "benchmark": "+7.1%", "holdings_excel": "downloads/DiversifiedMarketPlus/84_Diversified_Market_Plus_Feb_23.xlsx"},
+            {"month": "Mar 23", "return": "+0.5%", "benchmark": "+10.4%", "holdings_excel": "downloads/DiversifiedMarketPlus/85_Diversified_Market_Plus_Mar_23.xlsx"},
+            {"month": "Apr 23", "return": "+6.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/86_Diversified_Market_Plus_Apr_23.xlsx"},
+            {"month": "May 23", "return": "+4.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/87_Diversified_Market_Plus_May_23.xlsx"},
+            {"month": "Jun 23", "return": "+6.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/88_Diversified_Market_Plus_Jun_23.xlsx"},
+            {"month": "Jul 23", "return": "+7.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/89_Diversified_Market_Plus_Jul_23.xlsx"},
+            {"month": "Aug 23", "return": "+3.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/90_Diversified_Market_Plus_Aug_23.xlsx"},
+            {"month": "Sep 23", "return": "+5.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/91_Diversified_Market_Plus_Sep_23.xlsx"},
+            {"month": "Oct 23", "return": "-2.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/92_Diversified_Market_Plus_Oct_23.xlsx"},
+            {"month": "Nov 23", "return": "+10.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/93_Diversified_Market_Plus_Nov_23.xlsx"},
+            {"month": "Dec 23", "return": "+7.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/DiversifiedMarketPlus/94_Diversified_Market_Plus_Dec_23.xlsx"}
+          ]
+        }
+      }
+    },
+        {
+      "id": "LargeCaps",
+      "name": "Large Cap Leaders",
+      "category": "Sustained Growth & Leadership",
+      "color": "emerald",
+      "benchmark_name": "NIFTY 100",
+      "description": "Institutional-quality companies screened for sustainable growth characteristics and fundamental strength from Nifty 100",
+      "holdings_file": "96_Large_Cap_Leaders_Jan_26.xlsx",
+      "performance":  {
+        "2026": {
+          "ytd": "Ongoing",
+          "benchmark_ytd": "Ongoing",
+          "months": [
+            {"month": "Jan 26", "return": "Ongoing", "benchmark": "+8.2%", "holdings_excel": "downloads/LargeCapLeaders/96_Large_Cap_Leaders_Jan_26.xlsx"}         
+          ]
+        },
+        "2025": {
+          "ytd": "+4.6%",
+          "benchmark_ytd": "+8.5",
+          "months": [
+            {"month": "Jan 25", "return": "-5.4%", "benchmark": "+8.2%", "holdings_excel": "downloads/LargeCapLeaders/85_Large_Cap_Leaders_Jan_25.xlsx"},
+            {"month": "Feb 25", "return": "-12.0%", "benchmark": "+7.1%", "holdings_excel": "downloads/LargeCapLeaders/86_Large_Cap_Leaders_Feb_25.xlsx"},
+            {"month": "Mar 25", "return": "+12.7%", "benchmark": "+10.4%", "holdings_excel": "downloads/LargeCapLeaders/87_Large_Cap_Leaders_Mar_25.xlsx"},
+            {"month": "Apr 25", "return": "+4.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/88_Large_Cap_Leaders_Apr_25.xlsx"},
+            {"month": "May 25", "return": "+6.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/89_Large_Cap_Leaders_May_25.xlsx"},
+            {"month": "Jun 25", "return": "+5.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/90_Large_Cap_Leaders_Jun_25.xlsx"},
+            {"month": "Jul 25", "return": "-5.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/91_Large_Cap_Leaders_Jul_25.xlsx"},
+            {"month": "Aug 25", "return": "-0.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/91_Large_Cap_Leaders_Aug_25.xlsx"},
+            {"month": "Sep 25", "return": "+1.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/92_Large_Cap_Leaders_Sep_25.xlsx"},
+            {"month": "Oct 25", "return": "+2.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/93_Large_Cap_Leaders_Oct_25.xlsx"},
+            {"month": "Nov 25", "return": "-0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/94_Large_Cap_Leaders_Nov_25.xlsx"},
+            {"month": "Dec 25", "return": "-1.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/95_Large_Cap_Leaders_Dec_25.xlsx"}
+          ]
+        },
+        "2024": {
+          "ytd": "+32.4%",
+          "benchmark_ytd": "+11.7%",
+          "months": [
+           {"month": "Jan 24", "return": "+9.4%", "benchmark": "+8.2%", "holdings_excel": "downloads/LargeCapLeaders/78_Large_Cap_Leaders_Jan_24.xlsx"},
+            {"month": "Feb 24", "return": "+1.4%", "benchmark": "+7.1%", "holdings_excel": "downloads/LargeCapLeaders/78_Large_Cap_Leaders_Feb_24.xlsx"},
+            {"month": "Mar 24", "return": "+5.7%", "benchmark": "+10.4%", "holdings_excel": "downloads/LargeCapLeaders/79_Large_Cap_Leaders_Mar_24.xlsx"},
+            {"month": "Apr 24", "return": "+5.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/79_Large_Cap_Leaders_Apr_24.xlsx"},
+            {"month": "May 24", "return": "+9.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/79_Large_Cap_Leaders_May_24.xlsx"},
+            {"month": "Jun 24", "return": "+5.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/80_Large_Cap_Leaders_Jun_24.xlsx"},
+            {"month": "Jul 24", "return": "+7.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/81_Large_Cap_Leaders_Jul_24.xlsx"},
+            {"month": "Aug 24", "return": "-3.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/81_Large_Cap_Leaders_Aug_24.xlsx"},
+            {"month": "Sep 24", "return": "-0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/81_Large_Cap_Leaders_Sep_24.xlsx"},
+            {"month": "Oct 24", "return": "-8.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/82_Large_Cap_Leaders_Oct_24.xlsx"},
+            {"month": "Nov 24", "return": "+0.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/83_Large_Cap_Leaders_Nov_24.xlsx"},
+            {"month": "Dec 24", "return": "-2.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/84_Large_Cap_Leaders_Dec_24.xlsx"}
+          ]
+        },
+        "2023": {
+          "ytd": "+53.0%",
+          "benchmark_ytd": "+19.6%",
+          "months": [
+            {"month": "Jan 23", "return": "-8.2%", "benchmark": "+8.2%", "holdings_excel": "downloads/LargeCapLeaders/67_Large_Cap_Leaders_Jan_23.xlsx"},
+            {"month": "Feb 23", "return": "-7.4%", "benchmark": "+7.1%", "holdings_excel": "downloads/LargeCapLeaders/68_Large_Cap_Leaders_Feb_23.xlsx"},
+            {"month": "Mar 23", "return": "+2.3%", "benchmark": "+10.4%", "holdings_excel": "downloads/LargeCapLeaders/69_Large_Cap_Leaders_Mar_23.xlsx"},
+            {"month": "Apr 23", "return": "+6.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/70_Large_Cap_Leaders_Apr_23.xlsx"},
+            {"month": "May 23", "return": "+8.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/71_Large_Cap_Leaders_May_23.xlsx"},
+            {"month": "Jun 23", "return": "+6.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/72_Large_Cap_Leaders_Jun_23.xlsx"},
+            {"month": "Jul 23", "return": "+7.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/73_Large_Cap_Leaders_Jul_23.xlsx"},
+            {"month": "Aug 23", "return": "+4.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/74_Large_Cap_Leaders_Aug_23.xlsx"},
+            {"month": "Sep 23", "return": "+6.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/74_Large_Cap_Leaders_Sep_23.xlsx"},
+            {"month": "Oct 23", "return": "-3.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/75_Large_Cap_Leaders_Oct_23.xlsx"},
+            {"month": "Nov 23", "return": "+11.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/76_Large_Cap_Leaders_Nov_23.xlsx"},
+            {"month": "Dec 23", "return": "+11.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/LargeCapLeaders/77_Large_Cap_Leaders_Dec_23.xlsx"}
+          ]
+        }
+      }
+    },
+    {
+      "id": "Midcaps",
+      "name": "Emerging Growth Leaders",
+      "category": "Growth at Reasonable Price",
+      "color": "emerald",
+      "benchmark_name": "NIFTY Midcap 150",
+      "description": "Mid-cap companies with accelerating business fundamentals and structural growth tailwinds from Nifty Midcap 150",
+      "holdings_file": "96_Emerging_Growth_Leaders_Jan_26.xlsx",
+      "performance":  {
+        "2026": {
+          "ytd": "Ongoing",
+          "benchmark_ytd": "Ongoing",
+          "months": [
+            {"month": "Jan 26", "return": "Ongoing", "benchmark": "+8.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/96_Emerging_Growth_Leaders_Jan_26.xlsx"}         
+          ]
+        },
+        "2025": {
+          "ytd": "+5.2%",
+          "benchmark_ytd": "+4.8%",
+           "months": [
+            {"month": "Jan 25", "return": "-12.7%", "benchmark": "+8.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/85_Emerging_Growth_Leaders_Jan_25.xlsx"},
+            {"month": "Feb 25", "return": "-12.8%", "benchmark": "+7.1%", "holdings_excel": "downloads/EmergingGrowthLeaders/86_Emerging_Growth_Leaders_Feb_25.xlsx"},
+            {"month": "Mar 25", "return": "+10.7%", "benchmark": "+10.4%", "holdings_excel": "downloads/EmergingGrowthLeaders/87_Emerging_Growth_Leaders_Mar_25.xlsx"},
+            {"month": "Apr 25", "return": "+4.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/88_Emerging_Growth_Leaders_Apr_25.xlsx"},
+            {"month": "May 25", "return": "+11.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/89_Emerging_Growth_Leaders_May_25.xlsx"},
+            {"month": "Jun 25", "return": "+6.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/90_Emerging_Growth_Leaders_Jun_25.xlsx"},
+            {"month": "Jul 25", "return": "-0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/90_Emerging_Growth_Leaders_Jul_25.xlsx"},
+            {"month": "Aug 25", "return": "-1.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/91_Emerging_Growth_Leaders_Aug_25.xlsx"},
+            {"month": "Sep 25", "return": "-1.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/92_Emerging_Growth_Leaders_Sep_25.xlsx"},
+            {"month": "Oct 25", "return": "+2.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/93_Emerging_Growth_Leaders_Oct_25.xlsx"},
+            {"month": "Nov 25", "return": "+2.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/94_Emerging_Growth_Leaders_Nov_25.xlsx"},
+            {"month": "Dec 25", "return": "-0.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/95_Emerging_Growth_Leaders_Dec_25.xlsx"}
+          ]
+        },
+        "2024": {
+          "ytd": "+66.1%",
+          "benchmark_ytd": "+23.1%",
+          "months": [
+           {"month": "Jan 24", "return": "+11.2%", "benchmark": "+8.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/75_Emerging_Growth_Leaders_Jan_24.xlsx"},
+            {"month": "Feb 24", "return": "+0.6%", "benchmark": "+7.1%", "holdings_excel": "downloads/EmergingGrowthLeaders/76_Emerging_Growth_Leaders_Feb_24.xlsx"},
+            {"month": "Mar 24", "return": "+0.2%", "benchmark": "+10.4%", "holdings_excel": "downloads/EmergingGrowthLeaders/77_Emerging_Growth_Leaders_Mar_24.xlsx"},
+            {"month": "Apr 24", "return": "+14.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/78_Emerging_Growth_Leaders_Apr_24.xlsx"},
+            {"month": "May 24", "return": "+8.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/79_Emerging_Growth_Leaders_May_24.xlsx"},
+            {"month": "Jun 24", "return": "+9.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/80_Emerging_Growth_Leaders_Jun_24.xlsx"},
+            {"month": "Jul 24", "return": "+10.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/81_Emerging_Growth_Leaders_Jul_24.xlsx"},
+            {"month": "Aug 24", "return": "+0.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/81_Emerging_Growth_Leaders_Aug_24.xlsx"},
+            {"month": "Sep 24", "return": "+0.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/82_Emerging_Growth_Leaders_Sep_24.xlsx"},
+            {"month": "Oct 24", "return": "-5.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/83_Emerging_Growth_Leaders_Oct_24.xlsx"},
+            {"month": "Nov 24", "return": "-0.7%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/83_Emerging_Growth_Leaders_Nov_24.xlsx"},
+            {"month": "Dec 24", "return": "+4.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/84_Emerging_Growth_Leaders_Dec_24.xlsx"}
+          ]
+        },
+        "2023": {
+          "ytd": "+59.7%",
+          "benchmark_ytd": "+42.6%",
+          "months": [
+            {"month": "Jan 23", "return": "-6.0%", "benchmark": "+8.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/64_Emerging_Growth_Leaders_Jan_23.xlsx"},
+            {"month": "Feb 23", "return": "-2.9%", "benchmark": "+7.1%", "holdings_excel": "downloads/EmergingGrowthLeaders/65_Emerging_Growth_Leaders_Feb_23.xlsx"},
+            {"month": "Mar 23", "return": "+0.7%", "benchmark": "+10.4%", "holdings_excel": "downloads/EmergingGrowthLeaders/65_Emerging_Growth_Leaders_Mar_23.xlsx"},
+            {"month": "Apr 23", "return": "+8.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/66_Emerging_Growth_Leaders_Apr_23.xlsx"},
+            {"month": "May 23", "return": "+1.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/67_Emerging_Growth_Leaders_May_23.xlsx"},
+            {"month": "Jun 23", "return": "+9.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/68_Emerging_Growth_Leaders_Jun_23.xlsx"},
+            {"month": "Jul 23", "return": "+6.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/69_Emerging_Growth_Leaders_Jul_23.xlsx"},
+            {"month": "Aug 23", "return": "+7.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/70_Emerging_Growth_Leaders_Aug_23.xlsx"},
+            {"month": "Sep 23", "return": "+8.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/71_Emerging_Growth_Leaders_Sep_23.xlsx"},
+            {"month": "Oct 23", "return": "-1.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/72_Emerging_Growth_Leaders_Oct_23.xlsx"},
+            {"month": "Nov 23", "return": "+11.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/73_Emerging_Growth_Leaders_Nov_23.xlsx"},
+            {"month": "Dec 23", "return": "+6.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/74_Emerging_Growth_Leaders_Dec_23.xlsx"}
+          ]
+        }
+      }
+    },
+    {
+      "id": "SmallCaps",
+      "name": "Small Cap Select",
+      "category": "Quality at Reasonable Price",
+      "color": "emerald",
+      "benchmark_name": "Smallcap 250",
+      "description": "Identifying high-quality businesses with the potential to become future leaders, drawn from the Nifty Smallcap 250.",
+      "holdings_file": "114_Small_Cap_Select_Jan_26.xlsx",
+      "performance":  {
+        "2026": {
+          "ytd": "Ongoing",
+          "benchmark_ytd": "Ongoing",
+          "months": [
+            {"month": "Jan 26", "return": "Ongoing", "benchmark": "+8.2%", "holdings_excel": "downloads/SmallCapSelect/114_Small_Cap_Select_Jan_26.xlsx"}         
+          ]
+        },
+        "2025": {
+          "ytd": "-3.3%",
+          "benchmark_ytd": "-6.8%",
+          "months": [
+            {"month": "Jan 25", "return": "-16.2%", "benchmark": "+8.2%", "holdings_excel": "downloads/SmallCapSelect/102_Small_Cap_Select_Jan_25.xlsx"},
+            {"month": "Feb 25", "return": "-13.6%", "benchmark": "+7.1%", "holdings_excel": "downloads/SmallCapSelect/103_Small_Cap_Select_Feb_25.xlsx"},
+            {"month": "Mar 25", "return": "+17.4%", "benchmark": "+10.4%", "holdings_excel": "downloads/SmallCapSelect/104_Small_Cap_Select_Mar_25.xlsx"},
+            {"month": "Apr 25", "return": "-1.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/105_Small_Cap_Select_Apr_25.xlsx"},
+            {"month": "May 25", "return": "+7.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/106_Small_Cap_Select_May_25.xlsx"},
+            {"month": "Jun 25", "return": "+4.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/107_Small_Cap_Select_Jun_25.xlsx"},
+            {"month": "Jul 25", "return": "+0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/108_Small_Cap_Select_Jul_25.xlsx"},
+            {"month": "Aug 25", "return": "-1.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/109_Small_Cap_Select_Aug_25.xlsx"},
+            {"month": "Sep 25", "return": "-0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/110_Small_Cap_Select_Sep_25.xlsx"},
+            {"month": "Oct 25", "return": "+3.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/111_Small_Cap_Select_Oct_25.xlsx"},
+            {"month": "Nov 25", "return": "-1.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/112_Small_Cap_Select_Nov_25.xlsx"},
+            {"month": "Dec 25", "return": "+2.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/113_Small_Cap_Select_Dec_25.xlsx"}
+          ]
+        },
+        "2024": {
+          "ytd": "+58.0%",
+          "benchmark_ytd": "+25.6%",
+          "months": [
+           {"month": "Jan 24", "return": "+13.9%", "benchmark": "+8.2%", "holdings_excel": "downloads/SmallCapSelect/91_Small_Cap_Select_Jan_24.xlsx"},
+            {"month": "Feb 24", "return": "+2.9%", "benchmark": "+7.1%", "holdings_excel": "downloads/SmallCapSelect/92_Small_Cap_Select_Feb_24.xlsx"},
+            {"month": "Mar 24", "return": "-2.0%", "benchmark": "+10.4%", "holdings_excel": "downloads/SmallCapSelect/93_Small_Cap_Select_Mar_24.xlsx"},
+            {"month": "Apr 24", "return": "+17.4%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/93_Small_Cap_Select_Apr_24.xlsx"},
+            {"month": "May 24", "return": "+3.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/94_Small_Cap_Select_May_24.xlsx"},
+            {"month": "Jun 24", "return": "+8.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/95_Small_Cap_Select_Jun_24.xlsx"},
+            {"month": "Jul 24", "return": "+4.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/96_Small_Cap_Select_Jul_24.xlsx"},
+            {"month": "Aug 24", "return": "+0.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/97_Small_Cap_Select_Aug_24.xlsx"},
+            {"month": "Sep 24", "return": "-0.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/98_Small_Cap_Select_Sep_24.xlsx"},
+            {"month": "Oct 24", "return": "+5.1%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/99_Small_Cap_Select_Oct_24.xlsx"},
+            {"month": "Nov 24", "return": "+0.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/100_Small_Cap_Select_Nov_24.xlsx"},
+            {"month": "Dec 24", "return": "+4.0%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/101_Small_Cap_Select_Dec_24.xlsx"}
+          ]
+        },
+        "2023": {
+          "ytd": "+103.4%",
+          "benchmark_ytd": "+47.0%",
+          "months": [
+            {"month": "Jan 23", "return": "+1.6%", "benchmark": "+8.2%", "holdings_excel": "downloads/SmallCapSelect/80_Small_Cap_Select_Jan_23.xlsx"},
+            {"month": "Feb 23", "return": "-8.5%", "benchmark": "+7.1%", "holdings_excel": "downloads/SmallCapSelect/81_Small_Cap_Select_Feb_23.xlsx"},
+            {"month": "Mar 23", "return": "+4.2%", "benchmark": "+10.4%", "holdings_excel": "downloads/SmallCapSelect/82_Small_Cap_Select_Mar_23.xlsx"},
+            {"month": "Apr 23", "return": "+7.8%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/83_Small_Cap_Select_Apr_23.xlsx"},
+            {"month": "May 23", "return": "+7.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/84_Small_Cap_Select_May_23.xlsx"},
+            {"month": "Jun 23", "return": "+10.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/85_Small_Cap_Select_Jun_23.xlsx"},
+            {"month": "Jul 23", "return": "+17.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/85_Small_Cap_Select_Jul_23.xlsx"},
+            {"month": "Aug 23", "return": "+16.9%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/86_Small_Cap_Select_Aug_23.xlsx"},
+            {"month": "Sep 23", "return": "+0.5%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/87_Small_Cap_Select_Sep_23.xlsx"},
+            {"month": "Oct 23", "return": "+0.3%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/88_Small_Cap_Select_Oct_23.xlsx"},
+            {"month": "Nov 23", "return": "+14.6%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/89_Small_Cap_Select_Nov_23.xlsx"},
+            {"month": "Dec 23", "return": "+4.2%", "benchmark": "-1.2%", "holdings_excel": "downloads/SmallCapSelect/90_Small_Cap_Select_Dec_23.xlsx"}
+          ]
+        }
+      }
+    }
+  ]
+}

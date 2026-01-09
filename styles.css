@@ -1,0 +1,626 @@
+/* styles.css */
+
+html {
+    scroll-behavior: smooth;
+    background-color: #0A0F1C;
+}
+
+body {
+    background: linear-gradient(180deg, #0A0F1C 0%, #0F172A 100%);
+    color: #E2E8F0;
+    overflow-x: hidden;
+    overflow-y: auto; /* Add this - explicitly allow vertical scrolling */
+}
+
+.gradient-bg {
+    background: radial-gradient(circle at 20% 30%, rgba(13, 148, 136, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.8) 0%, transparent 50%);
+}
+
+.section-border {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-gradient {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.number-gradient {
+    background: linear-gradient(135deg, #0D9488 0%, #0F172A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glow {
+    box-shadow: 0 0 40px rgba(13, 148, 136, 0.2);
+}
+
+.tortoise-shell {
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(13, 148, 136, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+}
+
+.quote-decoration {
+    position: relative;
+}
+
+/* Enhanced Curve and Ball Animation Styles */
+.curve-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ball {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #0D9488;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 20px rgba(13, 148, 136, 0.8),
+        0 0 40px rgba(13, 148, 136, 0.4);
+    z-index: 30;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 0 15px rgba(13, 148, 136, 0.7));
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+.curve-line {
+    stroke: #0D9488;
+    stroke-width: 3;
+    fill: none;
+    opacity: 0.9;
+    filter: drop-shadow(0 0 12px rgba(13, 148, 136, 0.4));
+    z-index: 20;
+}
+
+.curve-container {
+    position: relative;
+    background: 
+        linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(13, 148, 136, 0.00);
+    border-radius: 24px;
+    padding: 32px;
+    height: 380px;
+    overflow: hidden;
+    box-shadow: 
+        inset 0 0 60px rgba(13, 148, 136, 0.1),
+        0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.curve-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        /* Grid pattern */
+        linear-gradient(90deg, rgba(13, 148, 136, 0.30) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(13, 148, 136, 0.30) 1px, transparent 1px),
+        /* Gradient overlay */
+        radial-gradient(circle at 70% 30%, rgba(13, 148, 136, 0.12) 0%, transparent 70%),
+        radial-gradient(circle at 30% 70%, rgba(13, 148, 136, 0.08) 0%, transparent 70%);
+    background-size: 40px 40px, 40px 40px, 100% 100%, 100% 100%;
+    z-index: 1;
+}
+
+.curve-heading {
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 40;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.curve-heading .highlight {
+    color: #0D9488;
+    text-shadow: 0 0 20px rgba(13, 148, 136, 0.5);
+}
+
+/* Floating particles in the background */
+.particle {
+    position: absolute;
+    background: rgba(13, 148, 136, 0.2);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes floatParticle {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.6;
+    }
+}
+
+/* Enhanced gradient overlay for depth */
+.curve-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(to bottom, 
+            transparent 0%, 
+            rgba(15, 23, 42, 0.1) 10%,
+            rgba(15, 23, 42, 0.3) 30%,
+            rgba(15, 23, 42, 0.5) 50%,
+            rgba(15, 23, 42, 0.3) 70%,
+            rgba(15, 23, 42, 0.1) 90%,
+            transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Coordinate axis labels */
+.coordinate-label {
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    pointer-events: none;
+}
+
+.x-label { bottom: 10px; }
+.y-label { left: 10px; }
+
+@media (max-width: 768px) {
+    .framework-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .curve-container {
+        height: 300px;
+        padding: 20px;
+    }
+    
+    .curve-heading {
+        font-size: 1.25rem;
+        top: 16px;
+    }
+    
+    .curve-bg {
+        background-size: 30px 30px, 30px 30px, 100% 100%, 100% 100%;
+    }
+}
+
+/* ==================== */
+/* PORTFOLIO CARD STYLES */
+/* ==================== */
+
+.portfolio-card {
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.month-card {
+    background: rgba(30, 41, 59, 0.3);
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.month-card:hover {
+    background: rgba(30, 41, 59, 0.6);
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background: #0D9488;
+    color: white;
+}
+
+.download-btn {
+    transition: all 0.2s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+}
+
+/* Modal Styles */
+#performanceModal, #cvModal {
+    backdrop-filter: blur(10px);
+}
+
+.year-tab.active {
+    background: #0D9488 !important;
+    color: white !important;
+}
+
+/* Performance Table */
+#performanceTable tr:last-child {
+    border-bottom: none;
+}
+
+.view-details-btn, .download-btn {
+    transition: all 0.2s ease;
+}
+
+.view-details-btn:hover, .download-btn:hover {
+    transform: translateY(-2px);
+}
+
+.view-details-btn:hover {
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.2);
+}
+
+.download-btn:hover {
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+#viewFullStory, #viewFullCV {
+    transition: all 0.3s ease;
+}
+
+#viewFullStory:hover, #viewFullCV:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(13, 148, 136, 0.3);
+}
+
+/* About Me Illustration Styles */
+.quant-illustration-container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Skill orbit animations */
+.skill-orbit {
+    position: absolute;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.skill-bubble {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.orbit-1 {
+    top: 20%;
+    left: 10%;
+    animation-name: orbit1;
+}
+
+.orbit-2 {
+    top: 10%;
+    right: 15%;
+    animation-name: orbit2;
+    animation-duration: 25s;
+}
+
+.orbit-3 {
+    bottom: 30%;
+    left: 5%;
+    animation-name: orbit3;
+    animation-duration: 30s;
+}
+
+.orbit-4 {
+    bottom: 20%;
+    right: 20%;
+    animation-name: orbit4;
+    animation-duration: 22s;
+}
+
+.orbit-5 {
+    top: 40%;
+    right: 5%;
+    animation-name: orbit5;
+    animation-duration: 28s;
+}
+
+@keyframes orbit1 {
+    0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+}
+
+@keyframes orbit2 {
+    0% { transform: rotate(45deg) translateX(100px) rotate(-45deg); }
+    100% { transform: rotate(405deg) translateX(100px) rotate(-405deg); }
+}
+
+@keyframes orbit3 {
+    0% { transform: rotate(120deg) translateX(70px) rotate(-120deg); }
+    100% { transform: rotate(480deg) translateX(70px) rotate(-480deg); }
+}
+
+@keyframes orbit4 {
+    0% { transform: rotate(200deg) translateX(90px) rotate(-200deg); }
+    100% { transform: rotate(560deg) translateX(90px) rotate(-560deg); }
+}
+
+@keyframes orbit5 {
+    0% { transform: rotate(300deg) translateX(60px) rotate(-300deg); }
+    100% { transform: rotate(660deg) translateX(60px) rotate(-660deg); }
+}
+
+/* Hover effects */
+.skill-bubble:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .curve-container {
+        height: 300px;
+        padding: 20px;
+    }
+    
+    .curve-heading {
+        font-size: 1.25rem;
+        top: 16px;
+    }
+    
+    .curve-bg {
+        background-size: 30px 30px, 30px 30px, 100% 100%, 100% 100%;
+    }
+    
+    .skill-orbit {
+        display: none; /* Hide orbits on mobile for better performance */
+    }
+    
+    .quant-illustration-container {
+        height: auto;
+        min-height: 300px;
+    }
+}
+/* Performance Table Styles */
+#performanceTable tr td:first-child {
+    width: 50%;
+}
+
+#performanceTable tr td:last-child {
+    width: 50%;
+}
+
+/* Ensure consistent alignment */
+#performanceTable tr td {
+    vertical-align: middle;
+    height: 48px;
+}
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+    /* Better curve container on mobile */
+    .curve-container {
+        height: 300px;
+        padding: 20px;
+    }
+    
+    .curve-heading {
+        font-size: 1.25rem;
+        top: 16px;
+    }
+    
+    /* Better portfolio card spacing */
+    .portfolio-card {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure performance modal is usable */
+    #performanceModal .sm\\:max-w-4xl {
+        max-width: 95%;
+        margin: 1rem auto;
+    }
+    
+    /* Fix modal table scrolling */
+    .overflow-x-auto {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Touch-friendly tap targets */
+@media (max-width: 640px) {
+    .view-details-btn,
+    .download-btn,
+    .year-tab {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Better text sizes for mobile */
+    .curve-heading {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+}
+
+/* Prevent horizontal overflow on very small screens */
+@media (max-width: 400px) {
+    .curve-container {
+        height: 250px;
+    }
+    
+    .stats-bar .flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+/* Enhanced Cumulative Display */
+#cumulativeDisplay {
+    transition: all 0.3s ease;
+}
+
+#cumulativeDisplay:hover {
+    background: rgba(30, 41, 59, 0.4);
+    border-color: rgba(13, 148, 136, 0.3);
+}
+
+#currentYearLabel {
+    background: rgba(13, 148, 136, 0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+#cumulativeStrategy {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #yearTabs {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .year-tab {
+        min-width: 60px;
+        text-align: center;
+    }
+    
+    #cumulativeDisplay {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    #cumulativeDisplay > div {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+/* Bottom Navigation Styles */
+.bottom-nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Remove all previous .bottom-nav a.active styles and replace with: */
+
+.bottom-nav a.active {
+    position: relative;
+}
+
+/* Make the ENTIRE button area colored */
+.bottom-nav a.active::before {
+    content: '';
+    position: absolute;
+    top: -8px; /* Extend above */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px; /* Wide background area */
+    height: 70px; /* Tall background area */
+    background: #0D9488; /* Solid tortoise color */
+    border-radius: 20px; /* Rounded rectangle */
+    z-index: -1; /* Behind the icon/text */
+    box-shadow: 0 0 25px rgba(13, 148, 136, 0.6);
+}
+
+/* Icon container - white on colored background */
+.bottom-nav a.active .w-10 {
+    background: white !important; /* White circle on colored bg */
+    border: 2px solid white !important;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+}
+
+/* Icon - tortoise color when active */
+.bottom-nav a.active svg {
+    color: #0D9488 !important; /* Tortoise icon on white */
+    transform: translateY(-2px);
+}
+
+/* Text - white on colored background */
+.bottom-nav a.active span {
+    color: white !important;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove the top dot */
+.bottom-nav a.active::after {
+    display: none;
+}
+
+/* Adjust content padding for bottom nav */
+@media (max-width: 768px) {
+    /* Add padding to main sections to avoid bottom nav overlap */
+    section {
+        padding-bottom: 80px !important;
+    }
+    
+    /* Hero section specific adjustment */
+    .pt-20 {
+        padding-top: 5rem; /* Adjusted for mobile */
+    }
+    
+    /* Contact section adjustment */
+    #contact {
+        padding-bottom: 100px !important;
+    }
+    
+    /* Footer adjustment */
+    footer {
+        padding-bottom: 80px !important;
+    }
+}
+
+/* Safe area for iPhone notches */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .bottom-nav {
+        padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+    }
+}
+/* Ensure scrolling always works */
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto !important;
+    height: 100%;
+    position: relative;
+}
+
+/* Mobile-specific scroll fix */
+@media (max-width: 768px) {
+    html, body {
+        -webkit-overflow-scrolling: touch !important;
+        overflow-y: scroll !important;
+    }
+}
+/* Hide About Me section but keep it in HTML */
+.hidden-section {
+    display: none !important;
+}
