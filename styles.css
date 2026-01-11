@@ -624,3 +624,14 @@ html, body {
 .hidden-section {
     display: none !important;
 }
+/* Adjust bottom nav for 2 buttons */
+@media (max-width: 768px) {
+    .md\\:hidden .flex.justify-around {
+        justify-content: space-evenly !important;
+        gap: 40px !important;
+    }
+    
+    .md\\:hidden .flex.justify-around a {
+        min-width: 80px;
+    }
+}

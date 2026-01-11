@@ -322,24 +322,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-// Bottom Navigation Active State
+// Bottom Navigation Active State - Update section IDs
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.bottom-nav a');
     
     // Function to set active link based on scroll position
     function setActiveLink() {
-        const scrollPos = window.scrollY + 100; // Offset for better detection
+        const scrollPos = window.scrollY + 100;
         
-        // Find current section
+        // Only check Home and Portfolio sections
+        const sections = ['home', 'portfolios'];
         let currentSection = '';
         
-        // Check each section
-        document.querySelectorAll('section[id]').forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionBottom = sectionTop + section.offsetHeight;
-            
-            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-                currentSection = section.id;
+        sections.forEach(sectionId => {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                const sectionTop = section.offsetTop - 100;
+                const sectionBottom = sectionTop + section.offsetHeight;
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                    currentSection = sectionId;
+                }
             }
         });
         
@@ -355,10 +358,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Set active link on scroll
     window.addEventListener('scroll', setActiveLink);
     
-    // Set active link on click with smooth scroll
+    // Set active link on click
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const targetId = this.getAttribute('href');
@@ -366,11 +368,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetId.startsWith('#')) {
                 e.preventDefault();
                 
-                // Update active state
                 navLinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Smooth scroll to section
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -382,6 +382,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Initial call
     setTimeout(setActiveLink, 100);
 });
