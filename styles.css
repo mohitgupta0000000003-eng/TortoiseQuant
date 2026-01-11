@@ -635,3 +635,27 @@ html, body {
         min-width: 80px;
     }
 }
+/* Fix footer padding for mobile bottom navigation */
+@media (max-width: 768px) {
+    footer {
+        padding-bottom: 120px !important; /* Increased padding */
+    }
+    
+    /* Adjust for devices with safe areas (iPhone X+ etc.) */
+    @supports (padding-bottom: env(safe-area-inset-bottom)) {
+        footer {
+            padding-bottom: calc(120px + env(safe-area-inset-bottom)) !important;
+        }
+    }
+    
+    /* Make footer text more visible */
+    footer .border-t {
+        padding-top: 1.5rem !important;
+    }
+    
+    /* Ensure footer content is above bottom nav */
+    footer {
+        position: relative;
+        z-index: 10;
+    }
+}
