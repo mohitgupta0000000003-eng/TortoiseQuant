@@ -7,14 +7,15 @@
       "color": "emerald",
       "benchmark_name": "NIFTY 200", 
       "description": "Balanced growth approach across market capitalization spectrum from Nifty 200",
-      "holdings_file": "115_Core_Growth_Mar_26.xlsx",
+      "holdings_file": "116_Core_Growth_Apr_26.xlsx",
       "performance": {
         "2026": {
-          "ytd": "-0.2%",
-          "benchmark_ytd": "-3.0%",
+          "ytd": "-13.3%",
+          "benchmark_ytd": "-14.2%",
           "months": [
             {"month": "Jan 26", "return": "-3.6%", "benchmark": "-3.2%", "holdings_excel": "downloads/CoreGrowth/113_Core_Growth_Jan_26.xlsx"},
-            {"month": "Feb 26", "return": "+3.5%", "benchmark": "-3.2%", "holdings_excel": "downloads/CoreGrowth/114_Core_Growth_Feb_26.xlsx"}         
+            {"month": "Feb 26", "return": "+3.5%", "benchmark": "-3.2%", "holdings_excel": "downloads/CoreGrowth/114_Core_Growth_Feb_26.xlsx"},
+            {"month": "Mar 26", "return": "-13.1%", "benchmark": "-3.2%", "holdings_excel": "downloads/CoreGrowth/115_Core_Growth_Mar_26.xlsx"}         
           ]
         },
         "2025": {
@@ -81,14 +82,15 @@
       "color": "emerald",
       "benchmark_name": "NIFTY 500",
       "description": "Systematically captures price momentum with volatility filters from Nifty500",
-      "holdings_file": "119_Momentum_Engine_Mar_26.xlsx",
+      "holdings_file": "120_Momentum_Engine_Apr_26.xlsx",
       "performance":  {
         "2026": {
-          "ytd": "-0.3%",
-          "benchmark_ytd": "-3.1%",
+          "ytd": "-13.5%",
+          "benchmark_ytd": "-14.1",
           "months": [
             {"month": "Jan 26", "return": "-4.2%", "benchmark": "-3.5%", "holdings_excel": "downloads/MomentumEngine/117_Momentum_Engine_Jan_26.xlsx"},
-            {"month": "Feb 26", "return": "+4.1%", "benchmark": "-3.5%", "holdings_excel": "downloads/MomentumEngine/118_Momentum_Engine_Feb_26.xlsx"}         
+            {"month": "Feb 26", "return": "+4.1%", "benchmark": "-3.5%", "holdings_excel": "downloads/MomentumEngine/118_Momentum_Engine_Feb_26.xlsx"},
+            {"month": "Mar 26", "return": "-13.2%", "benchmark": "-3.5%", "holdings_excel": "downloads/MomentumEngine/119_Momentum_Engine_Mar_26.xlsx"}         
           ]
         },
         "2025": {
@@ -154,14 +156,15 @@
       "color": "emerald",
       "benchmark_name": "NIFTY 500",
       "description": "Highly diversified strategy seeking to maximize information ratio vs Nifty 500",
-      "holdings_file": "121_Diversified_Market_Plus_Mar_26.xlsx",
+      "holdings_file": "122_Diversified_Market_Plus_Apr_26.xlsx",
       "performance": {
         "2026": {
-          "ytd": "+0.9%",
-          "benchmark_ytd": "-3.1%",
+          "ytd": "-12.0%",
+          "benchmark_ytd": "-14.1%",
           "months": [
             {"month": "Jan 26", "return": "-2.7%", "benchmark": "-3.5%", "holdings_excel": "downloads/DiversifiedMarketPlus/119_Diversified_Market_Plus_Jan_26.xlsx"},
-            {"month": "Feb 26", "return": "+3.7%", "benchmark": "-3.5%", "holdings_excel": "downloads/DiversifiedMarketPlus/120_Diversified_Market_Plus_Feb_26.xlsx"}         
+            {"month": "Feb 26", "return": "+3.0%", "benchmark": "-3.5%", "holdings_excel": "downloads/DiversifiedMarketPlus/120_Diversified_Market_Plus_Feb_26.xlsx"},
+            {"month": "Mar 26", "return": "-12.2%", "benchmark": "-3.5%", "holdings_excel": "downloads/DiversifiedMarketPlus/121_Diversified_Market_Plus_Mar_26.xlsx"}         
           ]
         },
         "2025": {
@@ -227,14 +230,15 @@
       "color": "emerald",
       "benchmark_name": "NIFTY 100",
       "description": "Institutional-quality companies screened for sustainable growth characteristics and fundamental strength from Nifty 100",
-      "holdings_file": "98_Large_Cap_Leaders_Mar_26.xlsx",
+      "holdings_file": "99_Large_Cap_Leaders_Apr_26.xlsx",
       "performance":  {
         "2026": {
-          "ytd": "+0.9%",
-          "benchmark_ytd": "-3.1%",
+          "ytd": "-12.7%",
+          "benchmark_ytd": "-14.4%",
           "months": [
             {"month": "Jan 26", "return": "-2.4%", "benchmark": "-3.1%", "holdings_excel": "downloads/LargeCapLeaders/96_Large_Cap_Leaders_Jan_26.xlsx"},
-            {"month": "Feb 26", "return": "+3.4%", "benchmark": "-3.1%", "holdings_excel": "downloads/LargeCapLeaders/97_Large_Cap_Leaders_Feb_26.xlsx"}         
+            {"month": "Feb 26", "return": "+3.4%", "benchmark": "-3.1%", "holdings_excel": "downloads/LargeCapLeaders/97_Large_Cap_Leaders_Feb_26.xlsx"},
+            {"month": "Mar 26", "return": "-13.5%", "benchmark": "-3.2%", "holdings_excel": "downloads/LargeCapLeaders/98_Large_Cap_Leaders_Mar_26.xlsx"}         
           ]
         },
         "2025": {
@@ -300,14 +304,15 @@
       "color": "emerald",
       "benchmark_name": "NIFTY Midcap 150",
       "description": "Mid-cap companies with accelerating business fundamentals and structural growth tailwinds from Nifty Midcap 150",
-      "holdings_file": "98_Emerging_Growth_Leaders_Mar_26.xlsx",
+      "holdings_file": "99_Emerging_Growth_Leaders_Apr_26.xlsx",
       "performance":  {
         "2026": {
-          "ytd": "+0.8%",
-          "benchmark_ytd": "-2.3%",
+          "ytd": "-10.7%",
+          "benchmark_ytd": "-13.1%",
           "months": [
             {"month": "Jan 26", "return": "-4.1%", "benchmark": "+8.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/96_Emerging_Growth_Leaders_Jan_26.xlsx"},
-            {"month": "Feb 26", "return": "+5.1%", "benchmark": "+8.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/97_Emerging_Growth_Leaders_Feb_26.xlsx"}         
+            {"month": "Feb 26", "return": "+5.1%", "benchmark": "+8.2%", "holdings_excel": "downloads/EmergingGrowthLeaders/97_Emerging_Growth_Leaders_Feb_26.xlsx"},
+            {"month": "Mar 26", "return": "-11.4%", "benchmark": "-3.5%", "holdings_excel": "downloads/EmergingGrowthLeaders/99_Emerging_Growth_Leaders_Mar_26.xlsx"}         
           ]
         },
         "2025": {
@@ -373,14 +378,15 @@
       "color": "emerald",
       "benchmark_name": "Smallcap 250",
       "description": "Identifying high-quality businesses with the potential to become future leaders, drawn from the Nifty Smallcap 250.",
-      "holdings_file": "116_Small_Cap_Select_Mar_26.xlsx",
+      "holdings_file": "117_Small_Cap_Select_Apr_26.xlsx",
       "performance":  {
         "2026": {
-          "ytd": "-4.8%",
-          "benchmark_ytd": "-4.7%",
+          "ytd": "-14.3%",
+          "benchmark_ytd": "-14.3%",
           "months": [
             {"month": "Jan 26", "return": "-5.1%", "benchmark": "+8.2%", "holdings_excel": "downloads/SmallCapSelect/114_Small_Cap_Select_Jan_26.xlsx"},
-            {"month": "Feb 26", "return": "+0.3%", "benchmark": "+8.2%", "holdings_excel": "downloads/SmallCapSelect/115_Small_Cap_Select_Feb_26.xlsx"}         
+            {"month": "Feb 26", "return": "+0.3%", "benchmark": "+8.2%", "holdings_excel": "downloads/SmallCapSelect/115_Small_Cap_Select_Feb_26.xlsx"},
+            {"month": "Mar 26", "return": "-10%", "benchmark": "-3.5%", "holdings_excel": "downloads/SmallCapSelect/116_Small_Cap_Select_Mar_26.xlsx"}         
           ]
         },
         "2025": {
