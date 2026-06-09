@@ -266,17 +266,19 @@ function loadYearData(strategy, year) {
     
     months.forEach(monthData => {
         const returnValue = parseFloat(monthData.return);
+        const benchmarkValue = parseFloat(monthData.benchmark);
         
         const row = document.createElement('tr');
         row.className = 'border-b border-slate-800/50 hover:bg-slate-800/30';
         row.innerHTML = `
-            <td class="py-3 px-4 text-slate-300 align-middle">${monthData.month}</td>
-            <td class="py-3 px-4 text-center font-medium ${returnValue >= 0 ? 'text-white' : 'text-red-400'} align-middle">${monthData.return}</td>
-            <td class="py-3 px-4 text-center align-middle">
+            <td class="py-3 px-2 sm:px-4 text-slate-300 align-middle">${monthData.month}</td>
+            <td class="py-3 px-2 sm:px-4 text-center font-medium ${returnValue >= 0 ? 'text-white' : 'text-red-400'} align-middle">${monthData.return}</td>
+            <td class="py-3 px-2 sm:px-4 text-center font-medium ${benchmarkValue >= 0 ? 'text-white' : 'text-red-400'} align-middle">${monthData.benchmark}</td>
+            <td class="py-3 px-2 sm:px-4 text-center align-middle">
                 <a href="${monthData.holdings_excel}" 
                    download
-                   class="inline-flex items-center px-3 py-1.5 bg-tortoise-accent/10 text-tortoise-accent rounded-lg text-sm font-medium hover:bg-tortoise-accent/20 transition-colors">
-                    <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+                   class="inline-flex items-center px-2 sm:px-3 py-1.5 bg-tortoise-accent/10 text-tortoise-accent rounded-lg text-xs sm:text-sm font-medium hover:bg-tortoise-accent/20 transition-colors">
+                    <svg class="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-1.5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                     </svg>
                     Excel
@@ -286,6 +288,7 @@ function loadYearData(strategy, year) {
         performanceTable.appendChild(row);
     });
 }
+
 // Close modal
 function closeModal() {
     const modal = document.getElementById('performanceModal');

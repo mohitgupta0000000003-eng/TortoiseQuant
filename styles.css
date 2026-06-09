@@ -659,3 +659,18 @@ html, body {
         z-index: 10;
     }
 }
+/* Ensure performance table is scrollable on mobile */
+#performanceModal .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+}
+
+/* Better mobile table styling */
+@media (max-width: 640px) {
+    #performanceTable td, 
+    #performanceTable th {
+        font-size: 0.7rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
